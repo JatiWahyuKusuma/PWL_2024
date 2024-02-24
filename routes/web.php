@@ -41,6 +41,12 @@ Route::resource('photos', PhotoController::class)->only([ 'index', 'show'
 Route::resource('photos', PhotoController::class)->except([ 'create', 'store', 'update', 'destroy'
 ]);
 
+// View
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Jati Wahyu Kusuma']);
+//     });
+Route::get('/greeting', [WelcomeController::class, 'greeting']);       
+
 
 Route::get('/tes', function(){
     return 'Selamat Datang';
